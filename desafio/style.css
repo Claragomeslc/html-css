@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --cor0: white;
+    --cor1: lightgray;
+    --cor2: darkgrey;
+    --cor3: rgba(255, 255, 255, 0.39);
+    --cor4: rgb(240, 236, 236);
+    --cor5: rgb(255, 184, 51);
+
+    --fonte-destaque: 'Raleway';
+    /*Fonte genérica, sempre no final*/
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: lightgray;
+    margin: 0px;
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+header {
+    background-color:var(--cor2); /*cor do meu cabeçalho*/
+    min-height: 125px; /*Tamanho do meu cabeçalho*/
+    text-align: center; /*Onde todo texto do meu header estara alinhado*/
+    padding-top: 40px; /*Distância do meu h1 da borda*/
+    font-family: var(--fonte-destaque); /*Fonte geral usada no meu header*/
+    box-shadow: 0px 2px 4px 1px #333333c9; /*Sombra abaixo do header*/
+}
+
+header > h1 {
+    color: white; /*Cor usada para o meu título*/
+    margin-bottom: 10px; /*Definição da margem usada para distanciar o h1 do p*/
+    font-weight: normal;
+}
+
+header > p{
+    color: var(--cor0); /*Cor usada para o paragrafo*/
+    /*como as cores do h1 e do p são iguais poderia ser definido no header mesmo*/
+}
+
+
+nav{
+    text-align: left;
+    color: white;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    color: rgb(255, 184, 51);
+}
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.39);
+    padding: 10px;
+    font-family: 'Raleway';
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.377);
+    /*border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;*/
+}
+
+main h1{
+    color: rgb(0, 0, 0);
+    font-family:var(--fonte-destaque);
+    font-weight: normal;
+    text-indent: 8px;
+    font-size: 1.8em;
+}
+
+main h2{
+    color: rgb(0, 0, 0);
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    text-align: left;
+    font-size: 1.3em;
+    text-indent: 8px;
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+main strong{
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: coral;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor5);
+}
+
+main img{
+    width: 100%;
+}
+
+main img.pqn{
+    max-width: 350px;
+}
+
+div.video{
+   background-color:var(--cor2);
+   margin: 0 -10px 30px -10px;
+   padding: 20px;
+    padding-bottom: 56.6%;
+   position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90% ;
+}
+/*
+#historia{
+    text-align: center;
+}
+
+#versao{
+    text-align: center;
+}
+
+#novo {
+    text-align: center;
+}
+
+/*.paragrafo{
+    text-align: left;
+}
+
+p{
+    font-family: 'Raleway';
+    font-size: 15px;
+}*/
+
+/*h2{
+    background-color: lightgray;
+    color: white;
+    text-align: left;
+}*/
+
+aside > h3{
+    color: rgb(0, 0, 0);
+    background-color: rgb(240, 236, 236);
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: left;
+}
+
+aside > ul{  /*Somente a ul de dentro aside vai ser modificada */
+ display: flex;
+ flex-wrap: wrap;
+ list-style-position: inside;
+ justify-content: center;
+}
+
+li{ /*Todas as li do documento serão modificadas pois não foi definida como a ul*/
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+aside{
+    background-color: rgba(128, 128, 128, 0.438);
+    padding: 10px;
+    box-shadow: 2px 2px 4px 1px #3333335b;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 70px;
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0px ;
+    margin-top: 30px;
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+
