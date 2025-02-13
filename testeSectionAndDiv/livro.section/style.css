@@ -1,0 +1,148 @@
+body {
+    font-family: 'Arial', sans-serif; /* Definindo uma fonte agradável */
+    background-color: #ff910091; /* Cor de fundo bem clarinha */
+    color: #333; /* Cor do texto mais escuro para facilitar a leitura */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o header */
+header {
+    background-color: #ff8800; /* Cor de fundo verde */
+    color: white; /* Cor do texto branco */
+    text-align: center;
+    padding: 20px 0;
+    border-left: 10px solid #ff8800;
+}
+
+/* Estilo para os títulos dentro das sections */
+section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o conteúdo dentro das sections */
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo para as sections */
+section {
+    background-color: #fff; /* Cor de fundo branca para as seções */
+    border-bottom: #ff8800; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 20px auto; /* Espaço entre as seções e também nas laterais */
+    max-width: 800px; /* Largura máxima das seções */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de profundidade */
+}
+/*javascript*/
+
+.content {
+    display: none; /*Esconder o conteúdo*/
+}
+
+.toggle-button { /*Estilo para os botões de mostrar/esconder*/
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.toggle-button:hover {
+    background-color: #ff8800; /*Mundo a cor do botão quando o usuário passar o mouse*/
+}
+
+.k {
+    background-color: #fff3e0;
+    border-left: 10px solid #ff9800;
+}
+
+.k h2 {
+    color: #ff5722;
+}
+
+
+/*.k {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 20px auto;
+    margin-right: 100px auto;
+}
+
+.k0{
+    background-color: #38803b;
+    border-left: #94ffc49a;
+    /*border-right: #ff9800;
+}
+.k0 h2{
+    background-color: #c8ffaf;
+}
+.k0 p{
+    font-size: 20px;
+    background-color: #dfffd0;
+
+}*/
+.k1{
+    background-color: #fff3e0;
+    border-left: 10px solid #ff9800;
+}
+.k1 h2{
+    background-color: #fff3e0;
+}
+.k1 p{
+    background-color: #fff3e0;
+}
+.k2{
+    background-color: #fff3e0;
+    border-left: 10px solid #ff9800;
+}
+.k2 h2{
+    background-color: #fff3e0;
+}
+.k2 p{
+    background-color: #fff3e0;
+}
+.k3{
+    background-color: #fff3e0;
+    border-left: 10px solid #ff9800;
+}
+.k3 h2{
+    background-color: #fff3e0;
+}
+.k3 p{
+    background-color: #fff3e0;
+}
+.k4{
+    background-color: #fff3e0;
+    border-left: 10px solid #ff9800;
+}
+.k4 h2{
+    background-color: #fff3e0;
+}
+.k4 p{
+    background-color: #fff3e0;
+}
+
+
+
+
+/* Estilo para o footer */
+footer {
+    background-color: #333; /* Cor de fundo escura para o rodapé */
+    color: white;
+    text-align: center;
+    position: static;
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    bottom: 0%;
+    left: 0%;
+ 
+}

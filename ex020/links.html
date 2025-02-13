@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:visited{
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        a::after {
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: rgba(128, 128, 128, 0.521);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://dainf.pg.utfpr.edu.br/?q=node/42"
+        target="_blank">DAINF</a></li>
+        <li><a href="https://www.youtube.com/@UTFPRPontaGrossaOficial">Canal do youtube</a></li>
+        <li><a href="https://www.utfpr.edu.br/campus/pontagrossa">Site da UTFPRPontaGrossaOficial</a></li>
+    </ul>
+</body>
+</html>
