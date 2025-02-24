@@ -8,7 +8,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             margin: 0%;
-            background-color: aliceblue;
+            background-color: rgb(255, 255, 255);
         }
 
         h1 {
@@ -24,6 +24,15 @@
             width: 500px;
            margin: auto;
            margin-bottom: 10px;
+           position: relative;
+        }
+
+        tbody > tr:nth-child(odd){
+            background-color: darkgrey;
+        }
+
+        tbody > tr:nth-child(even) { /*de duas em duas ele coloca a cor definida, mas somente os trs dentro de tbody*/
+            background-color: lightgray;
         }
 
         td, th {
@@ -32,8 +41,22 @@
             text-align: center;
         }
 
-        thead {
-            background-color: lightgray;
+        thead, tfoot {
+            background-color: rgba(0, 0, 0, 0.829);
+            color: white;
+        }
+
+        thead > tr > th { /*Cabeçalho fixo*/
+            position: sticky; /*Colável, grudável*/
+            top: -1px; /*Quer dizer que ele vai colar na parte "0", -1*/
+            background-color: rgba(0, 0, 0, 0.678);
+        }
+
+        caption{ /*especifica a legenda (ou título) de uma tabela.*/
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: darkgray;
         }
 
         footer{
@@ -52,6 +75,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!--ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (Legenda da tabela)
             THEAD cabeçalho
                 TR, TD, TH
             TBODY corpo 
@@ -62,11 +86,12 @@
 
     <!--Teste-->
     <table>
+        <caption>População das unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Numero</th>
-                <th>Unidade Federativa</th>
-                <th>População</th>
+                <th scope="col" style="width: 50px;">Numero</th> <!--Col para quando o dado for abaixo do título-->
+                <th scope="col">Unidade Federativa</th> <!--Ele é usado para especificar qual célula de uma tabela (linha ou coluna) a célula de cabeçalho (<th>) está se referindo.-->
+                <th scope="col">População</th>
             </tr> <!--Uma linha só-->
         </thead>
         <tbody>
@@ -232,11 +257,11 @@
                 <td>716 793</td>
             </tr>
         </tbody>
-        <tfoot>s
+        <tfoot>
             <tr>
-                <th>Total de Habitantes</th> <!--Título-->
-                <td>0000</td> <!--Dado-->
-                <td></td>
+                <th scope="row">Total de Habitantes</th> <!--Título, Row para quando o dado for ao lado do título-->
+                <td></td> <!--Dado-->
+                <td>0000</td>
             </tr>
         </tfoot>
     </table>

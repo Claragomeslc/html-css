@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+          table {
+           border-collapse: collapse;
+           width: 500px;
+           margin: auto;
+           margin-bottom: 10px;
+           position: relative;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de Células</h1>
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td> <!--Existem expansões (mesclagem), em forma de coluna, e em forma de linha-->
+        </tr>
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td>F</td>
+        <tr>
+         
+            <td>H</td>
+            <td>I</td>
+        </tr>
+         
+            <td>K</td>
+            <td>L</td>
+        <tr>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+        </tr>
+
+        <tr>
+            <td>P</td>
+            <td>Q</td>
+            <td>R</td>
+        </tr>
+    </table>
+</body>
+</html>
