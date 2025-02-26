@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px;
+            margin-top: 0px;
+            text-align: center;
+            background-color: darkgrey;
+            color: rgb(0, 0, 0);
+        }
+        table {
+            border-collapse: collapse;
+            width: 500px;
+           margin: auto;
+           margin-bottom: 10px;
+           position: relative;
+        }
+
+        tbody > tr:nth-child(odd){
+            background-color: darkgrey;
+        }
+
+        tbody > tr:nth-child(even) { /*de duas em duas ele coloca a cor definida, mas somente os trs dentro de tbody*/
+            background-color: lightgray;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        thead, tfoot {
+            background-color: rgba(0, 0, 0, 0.829);
+            color: white;
+        }
+
+        thead > tr > th { /*Cabeçalho fixo*/
+            position: sticky; /*Colável, grudável*/
+            top: -1px; /*Quer dizer que ele vai colar na parte "0", -1*/
+            background-color: rgba(0, 0, 0, 0.678);
+        }
+
+        caption{ /*especifica a legenda (ou título) de uma tabela.*/
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: darkgray;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center ;
+            padding: 20px;
+            font-family: 'Raleway';
+            font-size: 15px;
+            margin-top: auto; /* Garante que o footer fique na parte inferior */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION (Legenda da tabela)
+            THEAD cabeçalho
+                TR, TD, TH
+            TBODY corpo 
+                TR, TD, TH
+            TFOOT footer (pé)
+                TR, TD, TH
+    -->
+
+    <!--Teste-->
+    <table>
+        <caption>População das unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col" style="width: 50px;">Numero</th> <!--Col para quando o dado for abaixo do título-->
+                <th scope="col">Unidade Federativa</th> <!--Ele é usado para especificar qual célula de uma tabela (linha ou coluna) a célula de cabeçalho (<th>) está se referindo.-->
+                <th scope="col">População</th>
+            </tr> <!--Uma linha só-->
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td> <!--Dados-->
+                <td>41 262 199</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td>21 322 692</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td>17 219 679</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td>14 850 513</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td>11 824 665</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td>11 229 915</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td>9 539 029</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Ceará</td>
+                <td>9 223 656</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>Pará</td>
+                <td>8 664 306</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Santa Catarina</td>
+                <td>8 058 447</td>
+            </tr>
+
+            <tr>
+                <td>11</td>
+                <td>Goiás</td>
+                <td>7 350 483</td>
+            </tr>
+
+            <tr>
+                <td>12</td>
+                <td>Maranhão</td>
+                <td>7 010 960</td>
+            </tr>
+
+            <tr>
+                <td>13</td>
+                <td>Amazonas</td>
+                <td>4 281 209</td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td>Paraíba</td>
+                <td>4 145 040</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>Espírito Santo</td>
+                <td>4 102 129</td>
+            </tr>
+
+            <tr>
+                <td>16</td>
+                <td>Mato Grosso</td>
+                <td>3 836 399</td>
+            </tr>
+
+            <tr>
+                <td>17</td>
+                <td>Rio Grande do Norte</td>
+                <td>3 446 071</td>
+            </tr>
+
+            <tr>
+                <td>18</td>
+                <td>Piauaí</td>
+                <td>3 375 646</td>
+            </tr>
+
+            <tr>
+                <td>19</td>
+                <td>Alagoas</td>
+                <td>3 220 104</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>Distrito Federal</td>
+                <td>2 982 815</td>
+            </tr>
+
+            <tr>
+                <td>21</td>
+                <td>Mato Grosso do Sul</td>
+                <td>2 901 895</td>
+            </tr>
+
+            <tr>
+                <td>22</td>
+                <td>Sergipe</td>
+                <td>2 291 077</td>
+            </tr>
+
+            <tr>
+                <td>23</td>
+                <td>Rondônia</td>
+                <td>1 746 227</td>
+            </tr>
+
+            <tr>
+                <td>24</td>
+                <td>Tocantins</td>
+                <td>1 577 342</td>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td>Acre</td>
+                <td>880 631</td>
+            </tr>
+
+            <tr>
+                <td>26</td>
+                <td>Amapá</td>
+                <td>802 837</td>
+            </tr>
+
+            <tr>
+                <td>27</td>
+                <td>Roraima</td>
+                <td>716 793</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th> <!--Título, Row para quando o dado for ao lado do título-->
+                <td></td> <!--Dado-->
+                <td>0000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <footer>
+        <p>&copy;Clara Gomes</p>
+    </footer>
+</body>
+</html>
