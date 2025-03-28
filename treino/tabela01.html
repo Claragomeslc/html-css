@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de pessoas</title>
+
+    <style>
+        body{
+            margin: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }
+
+        /*O justify-content: flex-start, está posicionando os itens no ínicio, mas caso tenha o uso de height: 100vh, ele força o layout a ocupar toda a altura da teloa, o que acaba empurrando os itens para o final*/
+
+        table{
+            border-collapse: collapse;
+            width: 500px;
+            margin: auto;
+            margin-top: auto;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+       th, td{
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        a{
+            display: inline-block;
+            background-color: #4CAF50; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px 20px; /* Espaçamento interno (padding) */
+            text-decoration: none; /* Remove o sublinhado */
+            border-radius: 5px; /* Bordas arredondadas */
+            font-size: 16px; /* Tamanho da fonte */
+            margin-top: 20px;
+            transition: background-color 0.7s; /* Transição suave para a cor de fundo */
+        }
+
+        a:hover{
+            background-color: #3a633e;
+        }
+
+        div#saida{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+
+    <table>       
+        <thead>
+            <tr>
+                <th>Nome:</th>
+                <th>CPF:</th>
+                <th>Estado:</th>
+                <th>Cidade:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria Júlia</td>
+                <td>104.560.779-67</td>
+                <td>Rio Grade do Sul</td>
+                <td>Gramado</td>
+            </tr>
+            <tr>
+                <td>João Lucas</td>
+                <td>089.564.223-76</td>
+                <td>Bahia</td>
+                <td>Salvador</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="#" onclick="cadastro()">Cadastre-se</a>
+    <div id="saida"></div>
+    <script>
+        function cadastro() {
+            s = window.document.getElementById("saida")
+            s.innerHTML += '<p>Seu cadastro foi concluído com sucesso!</p>'
+        }
+    </script>
+</body>
+</html>
