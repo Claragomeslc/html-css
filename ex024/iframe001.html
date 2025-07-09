@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+    <style>
+        iframe{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--Por padrão o tamanho de um iframe, é de 300x150, CSS é soberano sobre as definições no próprio iframe-->
+    <h1>Testando Iframes</h1>
+    <!--<p>Acessando o meu perfil no github <a href="https://github.com/Claragomeslc" target="_blank">Claragomeslc</a> para aprender a programar.</p>  //Target manda o link para outra página-->
+
+    <p>Acessando o meu perfil 
+    <!--O frameborder só permite duas possibilidades 0 e 1-->
+        <iframe src="https://www.wikipedia.org" frameborder="0" height="500px" scolling=""> <!--Três definições: Auto: é o padrão se o conteúdo exceder o tamanho do frame, cria-se a barra de rolagem. Yes: Mesmo que o conteúdo estivesse cabendo todo dentro do iframe iria aparecer a barra de rolagem na lateral. No: Mesmo que o conteúdo seja maior, ele não permite fazer a rolagem (Obs: No navegador do google chrome do Windows ele DEIXA rolar, no google chrome do Mac ele NÃO DEIXA rolar!)-->
+            <a href="https://www.wikipedia.org" target="_blank"> wikipedia</a>
+        </iframe>
+        
+    no github Claragomeslc para aprender a programar.</p> 
+
+    <p>Aqui temos o repositório do gustavoguanabara<iframe src="https://gustavoguanabara.github.io/" frameborder="0" height="250px" width="250px">
+        <a href="https://gustavoguanabara.github.io/" target="_blank">repositório guanabara</a>
+    </iframe>que é legal para aprender</p>
+</body>
+</html>

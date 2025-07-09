@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic&display=swap');
+        *{
+            font-family: 'Raleway';
+            margin: 0%;
+        }
+
+        h1{
+            text-align: center;
+            background-color: rgb(17, 71, 73);
+            padding: 40px;
+            color: white;
+        }
+
+
+
+        form > p{
+            margin-top: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>MEU PRIMEIRO FORMULÁRIO</h1>
+    <form action="cadastro.php" method="post" autocomplete="off"> <!-- Autocomplete=off Para desligar a sugestão de preenchimento de dados-->
+    <!--Action, o script atribuído para está action/ação será disparado, quando foi clicado no botão, no caso no submit-->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p> 
+        
+        <!--label for, para relacionar a palavra com o id do input, seu elemento, seu controle. Utilidade de criar relação entre a palavra, neste caso Nome, e o objeto, input-->
+        
+        <!--Para fazer a caixinha, só utilizar a tag input, para fazer a caixinha se usa input text. Que obrigatóriamente se deve ter name e id, Nome para HTML e PHP, e o ID para JS e label, o name até vai para JS-->
+    
+        <!--Por enquanto não existe ligação entre o texto Nome e a caixa, para fazer as ligações utiliza os labels(etiquetas)-->
+
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+
+        <p><input type="submit" value="Enviar"></p> 
+        
+        <!--Input sbmit é um botão para enviar, submit/submeter, somente um atributo = value-->
+
+        <!--Os dados informados na entrada, saíram na barra da url, como faz pra tirar?-->
+    </form> <!--Todo formulário tem que estar nessa estrutura de forms /forms-->
+</body>
+</html>
+
+<!--HTML tem 2 tipos de metódo, simples pra envio de formulário. O primeiro método, é um método padrão, quando não se define, que é o método GET, no HTML não faz diferença se é escrito em maíusculo ou mínusculo, mas no PHP sim! GET, é o método que coloca os dados na barra de pesquisar-->
+
+<!--POST, é um método que não irá deixar os dados irem para a barra de pesquisa(URL), apesar de os dados não irem para a barra de pesquisa, não quer dizer que é um método seguro, os dados estão vísiveis, só não estão na URL, para o usuário. Não protegeu os dados, se olhar dentro do corpo, das requisições, da para capturar os dados-->
+
+<!--Para proteger os dados, é necessário criptografar os dados, e para isso é necessário usar HTTPS, que é um protocolo de transmissão de dados, HTTP, é o que estou utilizando-->
+
+<!--Quando usar GET? Quando usar POST? 
+O método GET(Método padrão), utiliza-se quando seus dados não forem sensíveis, como o nome do usuário, peso, altura, e quando você não pede senha, número de cartão de crédito, CEP.
+Quando não se usa GET?
+Quando se envia dados por GET, você só pode enviar até 3000 bytes, se ultrapassar, o GET não é o método ideal. 3000 bytes, é aproximadamente 3000 letras
+Quando se usa campos sensíveis, senha, número de cartão, etc...
+Quando for envio de fotos, ou qualquer outro tipo de arquivo-->
+
+<!--Quando se usa o POST?
+Quando se envia dados sensíveis, número de cartão de crédito, senhas. Mas o ideal é usar HTTPS, para proteger dados
+Quando não quer que os dados apareceram diretamente na URL
+Quando seus dados passarem de 3000 bytes
+Se quiser fazer o envio de arquivos-->
+
+<!--Hoje, os dois não tem diferença, sensível(perceptível), entre o método GET e POST-->
