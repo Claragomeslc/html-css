@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic&display=swap');
+
+        *{
+            margin: 0px;
+            font-family: 'Raleway';
+        }
+
+        body{
+            background-color: beige;
+        }
+
+        h1{
+            padding: 20px;
+            text-align: center;
+            color: white;
+            background-color: cadetblue;
+            margin-bottom: 1%;
+        }
+
+        form > p{
+            margin-top: 5px;
+        }
+
+        div{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>MEU PRIMEIRO FORMULÁRIO</h1>
+    
+
+    <div>
+        <form action="cadastro.php" autocomplete="off" method="post">
+            <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"> </p>
+            <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"> </p>
+        
+            <p> <input type="submit" value="Enviar"> </p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic&display=swap');
+
+        *{
+            margin: 0px;
+            font-family: 'Raleway';
+        }
+
+        h1{
+            padding: 20px;
+            color: white;
+            background-color: cadetblue;
+            text-align: center;
+            margin-bottom: 3%;
+        }
+
+        form > div{
+            margin-top: 5px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"> <!--Post para dados sensíveis, como senha-->
+        <div>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" placeholder="Digite o usuário aqui" autocomplete="username"> <!--Requerido, ou obrigatório-->
+        </div>
+
+        <div>
+            <label for="isenha">Senha: </label>
+            <input type="password" name="senha" id="isenha" required minlength="8" placeholder="Digite a senha aqui" autocomplete="new-password"> <!--input password para senha-->
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> <!--Limpa todos os campos-->
+        </div>
+    </form>
+</body>
+</html>
+<!--
+Autocomplete dentro do input para a senha
+Newpassword, serve para quando se pede se cadastre aqui, digite uma nova senha.
+current-password, para a senha atual.
+-->
+
+<!--Placeholder, é como se fosse uma dica. Local para por coisas-->
+
+<!--Size, para quantas letras mostrar por vez.-->
+
+<!--Se a senha é válida ou não, quem faz é o PHP-->
+
+<!--Minlenght para o minimo de letras, maxLenght para o máximo de comprimento-->
+
+<!--Usuário e Senha, são campos obrigatórios-->
+
+<!--Nome do input é importante para HTML, PHP e o id é importante para fazer a relação com o label e para o js-->
