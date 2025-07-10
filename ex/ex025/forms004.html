@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic&display=swap');
+
+        *{
+            margin: 0px;
+           font-family: 'Raleway';
+        }
+        </style>
+</head>
+<body>
+    <h1>FORMULÁRIO COM TELEFONE E E-MAIL</h1>
+    <form action="cadastro.php" autocomplete="on" method="get">
+
+        <fieldset> <!--Serve para agrupar campos semelhantes--> <!--Personalizar via CSS-->
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="iname">Nome: </label>
+                <input type="text" name="name" id="iname" required maxlength="30" placeholder="Digite seu nome aqui">
+            </div>
+            <div>
+                <label for="iemail">E-mail: </label>
+                <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="xxxxx@xxxx"> <!--Não esperar tanto deste input-->
+            </div> <!--Da pra colocar min/maxlenght no email e telefone-->
+            <div>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" required autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(00)9900-0000">
+                <!--Esse input tel tem compatibilidade adicional com aparelhos, dispositvos de telefone, que tem lista de contatos, ele consegue puxar-->
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
+
+
+<!--
+ESTUDAR
+Expressões regulares, RegEx (patterns, digitos pode ser \d ou [0-9])
+BUSCA EM HTML5
+telefone-pattern-->
