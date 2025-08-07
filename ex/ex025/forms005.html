@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="off">
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sx" id="isxfem" checked><label for="isxfem">Feminino</label> <!--Para que a opção feminino já fique marcado, us checked-->
+            <input type="radio" name="sx" id="isxmasc"><label for="isxmasc">Masculino</label> <!--Mesmo name para os dois radio, pois estão no mesmo grupo  NÃO SERVE PARA O CHECKBOX-->
+        </fieldset>
+
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esbasq" id="iesbasq"><label for="iesbasq">Basquete</label><br>
+            <input type="checkbox" name="escor" id="iescor"><label for="iescor">Corrida</label><br>
+            <input type="checkbox" name="esvol" id="iesvol"><label for="iesvol">Vôlei</label><br>
+            <input type="checkbox" name="esnat" id="iesnat"><label for="iesnat">Natação</label><br>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
+
+<!--Botão de radio, tem que ter o mesmo nome. Todo botão de radio que faz parte do mesmo grupo, tem que ter o mesmo name. E só pode escolher uma opção na bolinha. ID tem que ser diferente para que o label funcione-->
