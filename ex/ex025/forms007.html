@@ -4,47 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Seven</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic&display=swap');
+
+        *{
+            margin: 0px;
+            font-family: 'Raleway';
+        }
+
+        h1{
+            text-align: center;
+            background-color: rgb(79, 21, 134);
+            color: azure;
+            padding: 50px;
+            margin-bottom: 5%;
+        }
+
+        div{
+            text-align: center;
+            
+        }
+        #iest{
+            margin-bottom: 5%;
+        }
+
+        #iprof{
+            margin-bottom: 5%;
+        }
+
+        input > #iprof{
+            color: yellow;
+        }
+
+        footer{
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 65.9%;
+        }
+    </style>
 </head>
 <body>
-    <form action="cadastro.php" method="post" autocomplete="on">
-        <div>
-            <label for="iest">Estado: </label>
-            <select name="estado" id="iest">
-                <optgroup label="Região Sudeste">
-                    <option value="" selected>---ESCOLHA---</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="SP">São Paulo</option>
-                </optgroup>
 
-                <optgroup label="Região Nordeste">
-                    <option value="MA">Maranhão</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="RN">Rio GRande do Norte</option>
-                </optgroup>
-            </select>
-        </div>
-
-        <p>
-            <label for="prof">Profissão</label>
-            <input type="text" name="prof" id="iprof" list="lstprof">
-        </p>
-
-        <datalist id="lstprof">
-            <option value="Adm">Administrador</option>
-            <option value="CONT">Contador</option>
-            <option value="dev">Desenvolvedor</option>
-            <option value="PROF">Professor</option>
-        </datalist>
-
-        <p><label for="imsg">Mensagem:</label> <br>
-        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea> <!--Quantas colunas e quantas linhas irão aparecer na tela-->
-    </p>
-
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
-    </form>
+    <main>
+        <h1>Aprendendo um pouco mais de Formulário</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <div>
+                <label for="iest">Estado: </label>
+                <select name="estado" id="iest">
+                    <optgroup label="Região Sudeste">
+                        <option value="" selected>---ESCOLHA---</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="MA">Maranhão</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="RN">Rio GRande do Norte</option>
+                    </optgroup>
+                </select>
+                <p>
+                    <label for="iprof">Profissão</label>
+                    <input type="text" name="prof" id="iprof" list="lstprof">
+                </p>
+        
+                <datalist id="lstprof">
+                    <option value="ADM">Administrador</option>
+                    <option value="CONT">Contador</option>
+                    <option value="DEV">Desenvolvedor</option>
+                    <option value="PROF">Professor</option>
+                </datalist>
+        
+                <p><label for="imsg">Mensagem:</label> <br>
+                <textarea name="msg" id="imsg" cols="60" rows="10"></textarea> <!--Quantas colunas e quantas linhas irão aparecer na tela-->
+            </p>
+        
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </div>
+        
+        </form>
+    </main>
+    <footer>
+        <p>ClaraGomes</p>
+    </footer>
 </body>
 </html>
