@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic&display=swap');
+
+        *{
+            margin: 0% ;
+            font-family: 'Raleway';
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main{
+            flex: 1;
+        }
+
+        h1{
+            padding: 20px;
+            text-align: left;
+            background: linear-gradient(to right, #8e44ad, #3498db); /* roxo → azul 
+            background-color: #0056b3; */
+            color: azure;
+            margin-bottom: 5%;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px;
+        }
+
+        input{
+            background-color: aliceblue;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+        
+        button {
+            text-align: left;     
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: transform 0.5s, border 0.6s;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover{
+            border: 2px solid rgba(255, 255, 255, 0.603);
+            transform: translate(0px, -3px); /*mexer para cima e para esquerda*/
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.144); /*Para que a sombra afaste, já que o botão levantou*/
+            
+            background-color: rgba(235, 154, 235, 0.541);
+        }
+
+        footer{
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        </style>
+</head>
+<body>
+    <h1>FORMULÁRIO</h1>
+    <main>
+        <form action="cadastro.php" method="get" autocomplete="on">
+        
+            <p>
+                <label for="iano">Em que ano você nasceu?</label>
+                <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="calcIdade()">
+            </p>
+            <p>
+                <label for="iidade">Sua idade é: </label>
+                <output id="iidade">0</output>
+            </p>
+        
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+            <div class="buttons"><button type="submit">Enviar</button></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Clara Gomes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+         function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+         }
+    </script>
+</body>
+</html>

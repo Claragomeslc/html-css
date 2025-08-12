@@ -3,13 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Formulário</title>
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic&display=swap');
 
+        *{
+            margin: 0px;
+            font-family: 'Raleway';
+        }
     </style>
 </head>
 <body>
-    <h1></h1>
+    <h1>EXEMPLO DE FORMULÁRIO</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            
+        </p>
+
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma"></output>
+        </p>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
 </body>
 </html>
 <!--HTML e CSS, linguagem de marcação ou especificação-->
+
+
+<!--Quando for colocado dois números para a soma, e pedir para enviar. A soma do output, não será enviada. O output não é usado para enviar nada, e sim para mostrar na tela-->
